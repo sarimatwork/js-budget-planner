@@ -12,7 +12,7 @@ function checkBoxHandling(event) {
 function handleInputChange(event) {
   event.preventDefault();
   let totalIncome = 0;
-  let monthlyIncome = document.querySelectorAll(".income");
+  let monthlyIncome = document.querySelectorAll(".income-input");
   monthlyIncome.forEach(function (input) {
     totalIncome += Number(input.value) || 0;
   });
@@ -43,7 +43,7 @@ function percentageHandling(showPercentage,percentageValue){
     let perOfNecessities = (totalIncome * percentageValue) / 100;
     if(perOfNecessities != 0){
         document.querySelector(showPercentage).innerHTML =
-          perOfNecessities.toFixed(3);
+          perOfNecessities.toFixed(2);
         }
    else {
     document.querySelector(showPercentage).innerHTML =

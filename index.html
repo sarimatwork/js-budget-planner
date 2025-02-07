@@ -33,7 +33,7 @@
           <!--## Form Wrapper ##-->
           <div class="form-wrapper">
             <!--## Form ##-->
-            <form class="free-budget-form" >
+            <form class="free-budget-form">
               <!--## Form Header ##-->
               <div class="form-header">
                 <p>
@@ -54,35 +54,34 @@
                     <p>I'm a college student</p>
                   </label>
                 </div>
-                  <!--## check-content-group ##-->
-                  <div class="check-content-group">
-                    <label>
-                      <input type="checkbox" onchange="checkBoxHandling(event)" />
-                      <p>I'm a parent</p>
-                    </label>
-                  </div>
-                    <!--## check-content-group ##-->
+                <!--## check-content-group ##-->
                 <div class="check-content-group">
-                    <label>
-                      <input type="checkbox" onchange="checkBoxHandling(event)" />
-                      <p> I'm a homeowner</p>
-                    </label>
-                  </div>
-                    <!--## check-content-group ##-->
+                  <label>
+                    <input type="checkbox" onchange="checkBoxHandling(event)" />
+                    <p>I'm a parent</p>
+                  </label>
+                </div>
+                <!--## check-content-group ##-->
                 <div class="check-content-group">
-                    <label>
-                      <input type="checkbox" onchange="checkBoxHandling(event)" />
-                      <p> I'm a senior</p>
-                    </label>
-                  </div>
-                    <!--## check-content-group ##-->
+                  <label>
+                    <input type="checkbox" onchange="checkBoxHandling(event)" />
+                    <p>I'm a homeowner</p>
+                  </label>
+                </div>
+                <!--## check-content-group ##-->
                 <div class="check-content-group">
-                    <label>
-                      <input type="checkbox" onchange="checkBoxHandling(event)" />
-                      <p> None of the above</p>
-                    </label>
-                  </div>
-               
+                  <label>
+                    <input type="checkbox" onchange="checkBoxHandling(event)" />
+                    <p>I'm a senior</p>
+                  </label>
+                </div>
+                <!--## check-content-group ##-->
+                <div class="check-content-group">
+                  <label>
+                    <input type="checkbox" onchange="checkBoxHandling(event)" />
+                    <p>None of the above</p>
+                  </label>
+                </div>
               </div>
 
               <!--## monthly-income ##-->
@@ -94,12 +93,12 @@
 
                 <div class="form-group">
                   <label>Wages, after tax</label>
-                  <input type="number" placeholder="$" class="income" />
+                  <input type="number" placeholder="$" class="income-input" />
                 </div>
                 <!--## form group ##-->
                 <div class="form-group">
                   <label>Other</label>
-                  <input type="number" placeholder="$" class="income" />
+                  <input type="number" placeholder="$" class="income-input" />
                 </div>
               </div>
 
@@ -515,7 +514,7 @@
                   </div>
                 </div>
                 <div class="total">
-                  <h4>Total spent on necessities</h4>
+                  <h4>Total spent on wants</h4>
                   <div class="amount">
                     <h3>$<span class="wants-amount">0</span></h3>
                   </div>
@@ -640,7 +639,7 @@
                   </div>
                 </div>
                 <div class="total">
-                  <h4>Total spent on necessities</h4>
+                  <h4>Total spent on savings and paying off debt</h4>
                   <div class="amount">
                     <h3>$<span class="savings-amount">0</span></h3>
                   </div>
@@ -705,8 +704,6 @@
                   </div>
                 </div>
               </div>
-
-            
             </form>
           </div>
         </div>
