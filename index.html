@@ -1,0 +1,717 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free-Budget-Planner</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--### Styles link ###-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--## SECTION ##-->
+    <section class="free-budget-worksheet">
+      <div class="container">
+        <div class="row">
+          <div class="section-content">
+            <div class="section-heading">
+              <h2>Free budget worksheet</h2>
+            </div>
+            <div class="section-text">
+              <p>
+                Add your income and expenses to this monthly budget planner, and
+                we'll show how your spending aligns with the 50/30/20 rule.
+              </p>
+            </div>
+          </div>
+          <!--## Form Wrapper ##-->
+          <div class="form-wrapper">
+            <!--## Form ##-->
+            <form class="free-budget-form" >
+              <!--## Form Header ##-->
+              <div class="form-header">
+                <p>
+                  Fill in the fields of the budget template below. We’ll add
+                  them up and show how your spending compares with the 50/30/20
+                  budget. Leave boxes that don’t apply to you blank.
+                </p>
+              </div>
+
+              <!--## Check-boxes ##-->
+              <div class="checkbox-fields">
+                <label>Check all that apply</label>
+
+                <!--## check-content-group ##-->
+                <div class="check-content-group">
+                  <label>
+                    <input type="checkbox" onchange="checkBoxHandling(event)" />
+                    <p>I'm a college student</p>
+                  </label>
+                </div>
+                  <!--## check-content-group ##-->
+                  <div class="check-content-group">
+                    <label>
+                      <input type="checkbox" onchange="checkBoxHandling(event)" />
+                      <p>I'm a parent</p>
+                    </label>
+                  </div>
+                    <!--## check-content-group ##-->
+                <div class="check-content-group">
+                    <label>
+                      <input type="checkbox" onchange="checkBoxHandling(event)" />
+                      <p> I'm a homeowner</p>
+                    </label>
+                  </div>
+                    <!--## check-content-group ##-->
+                <div class="check-content-group">
+                    <label>
+                      <input type="checkbox" onchange="checkBoxHandling(event)" />
+                      <p> I'm a senior</p>
+                    </label>
+                  </div>
+                    <!--## check-content-group ##-->
+                <div class="check-content-group">
+                    <label>
+                      <input type="checkbox" onchange="checkBoxHandling(event)" />
+                      <p> None of the above</p>
+                    </label>
+                  </div>
+               
+              </div>
+
+              <!--## monthly-income ##-->
+              <div class="monthly-income">
+                <div class="section-heading">
+                  <h2>Monthly income</h2>
+                </div>
+                <!--## form group ##-->
+
+                <div class="form-group">
+                  <label>Wages, after tax</label>
+                  <input type="number" placeholder="$" class="income" />
+                </div>
+                <!--## form group ##-->
+                <div class="form-group">
+                  <label>Other</label>
+                  <input type="number" placeholder="$" class="income" />
+                </div>
+              </div>
+
+              <!--## small heading ##-->
+              <div class="section-heading">
+                <h3>Expenses</h3>
+              </div>
+
+              <!--## Needs (monthly) ##-->
+              <div class="needs">
+                <div class="section-heading">
+                  <h2>Needs (monthly)</h2>
+                </div>
+                <div class="row">
+                  <!--# column 1#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Rent/mortgage</label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 2#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Renters or homeowners insurance premiums </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 3#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Property tax bill </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 4#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Auto insurance premiums </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 5#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Health insurance premiums </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 6#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Out-of-pocket medical costs </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 7#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Life insurance premiums </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 8#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Electricity and natural gas bill </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 9#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Water bill </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 10#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Sanitation/garbage bill </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 11#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Groceries and other essentials </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 12#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Car payment </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 13#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Parking and registration fees </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 14#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Car maintenance and repairs </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 15#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Gasoline</label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 16#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Public transportation </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 17#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Phone bill </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 18#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Internet bill </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 19#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Minimum student loan payments </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 20#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Other minimum loan payments </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 21#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Child support or alimony payments </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 22#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Other </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="total">
+                  <h4>Total spent on necessities</h4>
+                  <div class="amount">
+                    <h3>$<span class="needs-amount">0</span></h3>
+                  </div>
+                </div>
+              </div>
+
+              <!--## Wants (monthly) ##-->
+              <div class="wants">
+                <div class="section-heading">
+                  <h2>Wants (monthly)</h2>
+                </div>
+                <div class="row">
+                  <!--# column 1#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Clothing, jewelry, etc. </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="wants-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 2#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Dining out </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="wants-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 3#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Special meals at home </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="wants-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 4#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Alcohol</label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="wants-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 5#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Movie, concert and event tickets </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="wants-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 6#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Gym or club memberships </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="wants-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 7#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Travel expenses </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="wants-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 8#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Cable or streaming packages </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="wants-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 9#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Home decor items </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="wants-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 10#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Other </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="wants-input"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="total">
+                  <h4>Total spent on necessities</h4>
+                  <div class="amount">
+                    <h3>$<span class="wants-amount">0</span></h3>
+                  </div>
+                </div>
+              </div>
+
+              <!--## Savings and debt repayment  (monthly) ##-->
+              <div class="savings-and-debt-repayment">
+                <div class="section-heading">
+                  <h2>Savings and debt repayment (monthly)</h2>
+                </div>
+                <div class="row">
+                  <!--# column 1#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Emergency fund contributions </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="saving-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 2#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Savings account contributions </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="saving-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 3#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>401(k) contributions </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="saving-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 4#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label
+                        >Individual retirement account contributions
+                      </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="saving-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 5#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Other investments </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="saving-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 6#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Credit card payments </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="saving-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 7#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Excess payments on student loans </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="saving-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 8#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Excess payments on mortgage </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="saving-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 9#-->
+                  <div class="col">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Other</label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="saving-input"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="total">
+                  <h4>Total spent on necessities</h4>
+                  <div class="amount">
+                    <h3>$<span class="savings-amount">0</span></h3>
+                  </div>
+                </div>
+              </div>
+
+              <!--## Total Result ##-->
+              <div class="total-result">
+                <div class="row">
+                  <!--## Heading ##-->
+                  <div class="col">
+                    <div class="section-heading">
+                      <h2>Your totals:</h2>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="section-heading">
+                      <h2>50/30/20 comparison:</h2>
+                    </div>
+                  </div>
+
+                  <!--# Needs #-->
+                  <div class="col">
+                    <label for="">Needs:</label>
+                    <div class="amount">
+                      <h3>$<span class="needs-amount">0</span></h3>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <label for="">50% for necessities:</label>
+                    <div class="amount">
+                      <h3>$<span class="percentage-of-necessities">0</span></h3>
+                    </div>
+                  </div>
+
+                  <!--# Wants #-->
+                  <div class="col">
+                    <label for="">Wants:</label>
+                    <div class="amount">
+                      <h3>$<span class="wants-amount">0</span></h3>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <label for="">30% for wants:</label>
+                    <div class="amount">
+                      <h3>$<span class="percentage-of-wants">0</span></h3>
+                    </div>
+                  </div>
+
+                  <!--# Savings and debt repayment #-->
+                  <div class="col">
+                    <label for="">Savings and debt repayment:</label>
+                    <div class="amount">
+                      <h3>$<span class="savings-amount">0</span></h3>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <label for="">20% for savings and debt repayment:</label>
+                    <div class="amount">
+                      <h3>$<span class="percentage-of-savings">0</span></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            
+            </form>
+          </div>
+        </div>
+      </div>
+      <script src="custom.js"></script>
+    </section>
+  </body>
+</html>
