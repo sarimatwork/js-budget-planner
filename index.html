@@ -50,35 +50,35 @@
                 <!--## check-content-group ##-->
                 <div class="check-content-group">
                   <label>
-                    <input type="checkbox" onchange="checkBoxHandling(event)" />
+                    <input type="checkbox" onchange="checkBoxHandling(event)" id="applyCollegeStudent"/>
                     <p>I'm a college student</p>
                   </label>
                 </div>
                 <!--## check-content-group ##-->
                 <div class="check-content-group">
                   <label>
-                    <input type="checkbox" onchange="checkBoxHandling(event)" />
+                    <input type="checkbox" onchange="checkBoxHandling(event)" id="applyParents"/>
                     <p>I'm a parent</p>
                   </label>
                 </div>
                 <!--## check-content-group ##-->
                 <div class="check-content-group">
                   <label>
-                    <input type="checkbox" onchange="checkBoxHandling(event)" />
+                    <input type="checkbox" onchange="checkBoxHandling(event)" id="applyHomeOver"/>
                     <p>I'm a homeowner</p>
                   </label>
                 </div>
                 <!--## check-content-group ##-->
                 <div class="check-content-group">
                   <label>
-                    <input type="checkbox" onchange="checkBoxHandling(event)" />
-                    <p>I'm a senior</p>
+                    <input type="checkbox" onchange="checkBoxHandling(event)" id="applySenior"/>
+                    <p>I'm a older adult</p>
                   </label>
                 </div>
                 <!--## check-content-group ##-->
                 <div class="check-content-group">
                   <label>
-                    <input type="checkbox" onchange="checkBoxHandling(event)" />
+                    <input type="checkbox" onchange="checkBoxHandling(event)" id="ApplyNone"/>
                     <p>None of the above</p>
                   </label>
                 </div>
@@ -90,14 +90,54 @@
                   <h2>Monthly income</h2>
                 </div>
                 <!--## form group ##-->
-
-                <div class="form-group">
+                <div class="form-group show">
                   <label>Wages, after tax</label>
                   <input type="number" placeholder="$" class="income-input" />
                 </div>
                 <!--## form group ##-->
                 <div class="form-group">
                   <label>Other</label>
+                  <input type="number" placeholder="$" class="income-input" />
+                </div>
+
+                <!--## form group ##-->
+                <div class="form-group collegeStudentFilter">
+                  <label>Financial aid</label>
+                  <input type="number" placeholder="$" class="income-input" />
+                </div>
+                <!--## form group ##-->
+                <div class="form-group collegeStudentFilter">
+                  <label>Allowance</label>
+                  <input type="number" placeholder="$" class="income-input" />
+                </div>
+                <!--## form group ##-->
+                <div class="form-group parentsFilter">
+                  <label>Child support/alimony</label>
+                  <input type="number" placeholder="$" class="income-input" />
+                </div>
+                <!--## form group ##-->
+                <div class="form-group homeOverFilter">
+                  <label>Rental income</label>
+                  <input type="number" placeholder="$" class="income-input" />
+                </div>
+                <!--## form group ##-->
+                <div class="form-group seniorFilter">
+                  <label>Social Security benefits</label>
+                  <input type="number" placeholder="$" class="income-input" />
+                </div>
+                <!--## form group ##-->
+                <div class="form-group seniorFilter">
+                  <label>Pension</label>
+                  <input type="number" placeholder="$" class="income-input" />
+                </div>
+                <!--## form group ##-->
+                <div class="form-group seniorFilter">
+                  <label>IRA distribution</label>
+                  <input type="number" placeholder="$" class="income-input" />
+                </div>
+                <!--## form group ##-->
+                <div class="form-group seniorFilter">
+                  <label>401(k) distribution</label>
                   <input type="number" placeholder="$" class="income-input" />
                 </div>
               </div>
@@ -366,6 +406,139 @@
                     </div>
                   </div>
                   <!--# column 22#-->
+                  <div class="col parentsFilter">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Babysitter, nanny, day care costs </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+
+                  <!--# column 23#-->
+                  <div class="col parentsFilter">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Diapers </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 24#-->
+                  <div class="col parentsFilter">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Bottles and other supplies </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 23#-->
+                  <div class="col collegeStudentFilter parentsFilter">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Tuition/education fees </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 24#-->
+                  <div class="col collegeStudentFilter parentsFilter">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>School supplies and electronics </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 25#-->
+                  <div class="col collegeStudentFilter parentsFilter">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Tutoring, test/college prep courses </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 26#-->
+                  <div class="col collegeStudentFilter">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Laundry</label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 27#-->
+                  <div class="col collegeStudentFilter">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Room and board </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 28#-->
+                  <div class="col collegeStudentFilter">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Books </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 29#-->
+                  <div class="col homeOverFilter">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Home maintenance and repair </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 30#-->
+                  <div class="col homeOverFilter">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Homeowners association fees </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="needs-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 31#-->
                   <div class="col">
                     <!--## form group ##-->
                     <div class="form-group">
@@ -501,6 +674,78 @@
                     </div>
                   </div>
                   <!--# column 10#-->
+                  <div class="col parentsFilter">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Toys</label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="wants-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 11#-->
+                  <div class="col parentsFilter">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Birthday party gifts, decorations, etc. </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="wants-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 12#-->
+                  <div class="col parentsFilter">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Sports, music lessons, etc. </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="wants-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 13#-->
+                  <div class="col collegeStudentFilter">
+                    <!--## form group ##-->
+                    <div class="form-group">
+                      <label>Sports, Greek life, etc. </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="wants-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 14#-->
+                  <div class="col homeOverFilter">
+                    <!--## form group ##-->
+                    <div class="form-group ">
+                      <label>Furniture </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="wants-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 15#-->
+                  <div class="col homeOverFilter">
+                    <!--## form group ##-->
+                    <div class="form-group ">
+                      <label>Gardener/pool/alarm service </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="wants-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 16#-->
                   <div class="col">
                     <!--## form group ##-->
                     <div class="form-group">
@@ -626,6 +871,18 @@
                     </div>
                   </div>
                   <!--# column 9#-->
+                  <div class="col parentsFilter">
+                    <!--## form group ##-->
+                    <div class="form-group ">
+                      <label>College savings </label>
+                      <input
+                        type="number"
+                        placeholder="$"
+                        class="saving-input"
+                      />
+                    </div>
+                  </div>
+                  <!--# column 10#-->
                   <div class="col">
                     <!--## form group ##-->
                     <div class="form-group">
