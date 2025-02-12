@@ -13,8 +13,10 @@ function checkBoxHandling(event) {
       let collegeCheckBox = document.querySelector("#applyCollegeStudent");
       let parentsCheckBox = document.querySelector("#applyParents");
       if (checkboxValue === "collegeStudentFilter" && parentsCheckBox.checked) {
+        fieldsVisibilityHandling(".collegeStudentFilter", "none", true);
         fieldsVisibilityHandling(".parentsFilter", "block");
       } else if (checkboxValue === "parentsFilter" && collegeCheckBox.checked) {
+        fieldsVisibilityHandling(".parentsFilter", "none", true);
         fieldsVisibilityHandling(".collegeStudentFilter", "block");
       } else {
         fieldsVisibilityHandling(`.${checkboxValue}`, "none");
@@ -87,12 +89,15 @@ if (filterItems.length) {
 }
 
 // -> Fields Visibility Handling
-function fieldsVisibilityHandling(classItem, visibility) {
+function fieldsVisibilityHandling(classItem, visibility, isMultiFilter) {
   const fields = document.querySelectorAll(classItem);
   fields.forEach((field) => {
     field.style.display = visibility;
-    if (visibility === "none") {
-      field.querySelector("input").value = "";
+    if (visibility === "none" && !isMultiFilter) {
+      let input = field.querySelector("input");
+      input.value = "";
+      input.dispatchEvent(new Event("input", { bubbles: true }));
+      input.dispatchEvent(new Event("change", { bubbles: true }));
     }
   });
 }
